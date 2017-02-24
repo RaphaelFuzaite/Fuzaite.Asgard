@@ -1,0 +1,71 @@
+﻿<ion-view view-title="Dashboard - Metas">
+    <ion-content class="padding">
+
+        <!--<div class="ui center aligned segment">
+            <div class="content">
+                <h4 class="ui header">PRÓXIMA META</h4>
+                <div class="description">
+                    <div id="svg-d3-radial">
+                        <div id="donut-diary-goal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <div class="ui center aligned segment">
+            <div class="content">
+                <div class="ui header">META DIÁRIA</div>
+                <div class="description">
+                    <div class="ui progress" data-value="{{ metas.MetaDiaria.PercentualAtual }}" data-total="100">
+                        <div class="bar bg-azul-escuro font-branco">{{ metas.MetaDiaria.PercentualAtual }}%</div>
+                        <div class="label"></div>
+                    </div>
+
+                    <div class="ui grid">
+                        <div class="eight wide column">
+                            <table class="ui unstackable compact table font-medium">
+                                <thead>
+                                    <tr>
+                                        <th class="center aligned">Hora</th>
+                                        <th class="center aligned">Meta</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-class="{'positive': item.Meta <= metas.TotalEmVendas.Data.Total, 'negative': item.Meta > metas.TotalEmVendas.Data.Total && metas.MetaDiaria.HoraAtual > item.Titulo }" ng-repeat="item in metas.MetaDiaria.Data | limitTo: (metas.MetaDiaria.Data.length/2)">
+                                        <td class="center aligned">
+                                            <i class="check circle outline icon" ng-show="item.Meta < metas.TotalEmVendas.Data.Total"></i>
+                                            <i class="circle thin icon" ng-show="item.Meta >= metas.TotalEmVendas.Data.Total"></i>
+                                            {{ item.Titulo + 'h00' }}
+                                        </td>
+                                        <td class="center aligned"> {{ item.Meta | byteNotation : 0 }} </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="eight wide column">
+                            <table class="ui unstackable compact table font-medium">
+                                <thead>
+                                    <tr>
+                                        <th class="center aligned">Hora</th>
+                                        <th class="center aligned">Meta</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-class="{'positive': item.Meta <= metas.TotalEmVendas.Data.Total, 'negative': item.Meta > metas.TotalEmVendas.Data.Total && metas.MetaDiaria.HoraAtual > item.Titulo }" ng-repeat="item in metas.MetaDiaria.Data | limitTo: (metas.MetaDiaria.Data.length):(metas.MetaDiaria.Data.length/2)">
+                                        <td class="center aligned">
+                                            <i class="check circle outline icon" ng-show="item.Meta < metas.TotalEmVendas.Data.Total"></i>
+                                            <i class="circle thin icon" ng-show="item.Meta >= metas.TotalEmVendas.Data.Total"></i>
+                                            {{ item.Titulo + 'h00' }}
+                                        </td>
+                                        <td class="center aligned"> {{ item.Meta | byteNotation : 0 }} </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+﻿<ion-view view-title="Dashboard - Vendedores">
+    <ion-content class="padding">
+        
+        <div class="ui center aligned segment">
+            <div class="content">
+                <h4 class="ui header">RANKING DE VENDEDORES</h4>
+                <div class="description">
+                    <table class="ui unstackable very basic compact table font-medium">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Vendedor</th>
+                                <th class="center aligned">Percentual</th>
+                                <th class="right aligned">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-class="{'positive': $index < 3, 'warning': $index > 2 && $index < 10, 'negative': $index > vendedores.Vendedores.Data.length - 5}" ng-repeat="item in vendedores.Vendedores.Data">
+                                <td>
+                                    <a class="ui mini circular label" ng-class="{'teal': $index < 3, 'yellow': $index > 2 && $index < 10, 'red': $index > vendedores.Vendedores.Data.length - 5}">
+                                        {{ $index + 1 }}
+                                    </a>
+                                </td>
+                                <td>{{ item.Nome | cut:true:15:' ' }}</td>
+                                <td class="center aligned">
+                                    {{ (item.Total / vendedores.TotalEmVendas.Data.Total) * 100 | currency : "" : 0 }}%
+                                </td>
+                                <td class="right aligned">
+                                    R$ {{ item.Total | currency : "" : 2 }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

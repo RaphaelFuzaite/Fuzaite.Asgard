@@ -1,0 +1,311 @@
+﻿@font-face {
+    font-family: "Gotham-T";
+    src: url(fonts/Gotham-Thin.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Gotham-B";
+    src: url(fonts/Gotham-Book.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gotham-M";
+    src: url(fonts/Gotham-Medium.otf);
+    font-weight: bold;
+}
+
+body {
+    background-color: #e6e6e6;
+    font-family: "Gotham-B", sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Gotham-B", sans-serif;
+}
+
+.bg-verde-escuro {
+    background-color: #41A037 !important;
+}
+
+.bg-azul-escuro {
+    background-color: #00A9CE !important;
+}
+
+.bg-laranja-escuro {
+    background-color: #FF5C39 !important;
+}
+
+.bg-laranja-claro {
+    background-color: #FF9600 !important;
+}
+
+.bg-turquesa {
+    background-color: #00C7B1 !important;
+}
+
+.bg-magenta {
+    background-color: #960061 !important;
+}
+
+.bg-vermelho {
+    background-color: #D50032 !important;
+}
+
+.bg-cinza-claro {
+    background-color: #ddd !important;
+}
+
+.bg-amarelo {
+    background-color: #FFC800 !important;
+}
+
+.bg-roxo {
+    background-color: #A05EBE !important;
+}
+
+.bg-verde-claro {
+    background-color: #97D700 !important;
+}
+
+.bg-azul-claro {
+    background-color: #6EBEDC !important;
+}
+
+.border-verde-escuro {
+    border-color: #41A037 !important;
+}
+
+.border-azul-escuro {
+    border-color: #00A9CE !important;
+}
+
+.border-laranja-escuro {
+    border-color: #FF5C39 !important;
+}
+
+.border-laranja-claro {
+    border-color: #FF9600 !important;
+}
+
+.border-turquesa {
+    border-color: #00C7B1 !important;
+}
+
+.border-magenta {
+    border-color: #960061 !important;
+}
+
+.border-vermelho {
+    border-color: #D50032 !important;
+}
+
+.border-cinza-claro {
+    border-color: #ddd !important;
+}
+
+.border-amarelo {
+    border-color: #FFC800 !important;
+}
+
+.border-roxo {
+    border-color: #A05EBE !important;
+}
+
+.border-verde-claro {
+    border-color: #97D700 !important;
+}
+
+.border-azul-claro {
+    border-color: #6EBEDC !important;
+}
+
+.font-verde-escuro {
+    color: #41A037 !important;
+}
+
+.font-azul-escuro {
+    color: #00A9CE !important;
+}
+
+.font-laranja-escuro {
+    color: #FF5C39 !important;
+}
+
+.font-laranja-claro {
+    color: #FF9600 !important;
+}
+
+.font-turquesa {
+    color: #00C7B1 !important;
+}
+
+.font-magenta {
+    color: #960061 !important;
+}
+
+.font-vermelho {
+    color: #D50032 !important;
+}
+
+.font-vermelho-secundario {
+    color: #B40032 !important;
+}
+
+.font-cinza-claro {
+    color: #ddd !important;
+}
+
+.font-amarelo {
+    color: #FFC800 !important;
+}
+
+.font-roxo {
+    color: #A05EBE !important;
+}
+
+.font-verde-claro {
+    color: #97D700 !important;
+}
+
+.font-azul-claro {
+    color: #6EBEDC !important;
+}
+
+.font-cinza-escuro {
+    color: #333 !important;
+}
+
+.font-branco {
+    color: #FFF !important;
+}
+
+.brand-bar {
+    background-image: -moz-linear-gradient( 0deg, rgb(228,0,43) 0%, rgb(199,0,70) 49%, rgb(170,0,97) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(228,0,43) 0%, rgb(199,0,70) 49%, rgb(170,0,97) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(228,0,43) 0%, rgb(199,0,70) 49%, rgb(170,0,97) 100%);
+    -moz-box-shadow: 0 1px 5px 1.82px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 5px 1.82px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px 1.82px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    z-index: 4;
+    padding: 25px 0;
+}
+
+ion-header-bar.bar .title {
+    font-family: "Gotham-B", sans-serif !important;
+}
+
+.orange-gradiente {
+    background: #FF5C39;
+    background: -moz-linear-gradient(90deg, #FF5C39 0%, #FF9600 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #FF5C39), color-stop(100%, #FF9600));
+    background: -webkit-linear-gradient(90deg, #FF5C39 0%, #FF9600 100%);
+    background: -o-linear-gradient(90deg, #FF5C39 0%, #FF9600 100%);
+    background: -ms-linear-gradient(90deg, #FF5C39 0%, #FF9600 100%);
+    background: linear-gradient(90deg, #FF5C39 0%, #FF9600 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF5C39', endColorstr='#FF9600', GradientType=1 );
+    margin: 0 auto;
+    border-color: transparent;
+}
+
+.magenta-gradiente {
+    background: #960061;
+    background: -moz-linear-gradient(180deg,#960061 0%,#A05EBE 100%);
+    background: -webkit-gradient(left bottom,right top,color-stop(0%,#960061),color-stop(100%,#A05EBE));
+    background: -webkit-linear-gradient(180deg,#960061 0%,#A05EBE 100%);
+    background: -o-linear-gradient(180deg,#960061 0%,#A05EBE 100%);
+    background: -ms-linear-gradient(180deg,#960061 0%,#A05EBE 100%);
+    background: linear-gradient(180deg,#960061 0%,#A05EBE 100%);
+    margin: 0 auto;
+    border-color: transparent;
+}
+
+.padding-30-0 {
+    padding: 30px 0px !important;
+}
+
+.padding-10-0 {
+    padding: 10px 0px !important;
+}
+
+.ui.inverted .column .content {
+    color: #FFF;
+}
+
+.description h1.header.huge {
+    font-size: 4em;
+}
+
+svg { 
+    font-family: "Gotham-B", sans-serif;
+}
+
+.font-small {
+    font-size: 10px !important;
+}
+
+.font-medium {
+    font-size: 12px !important;
+}
+
+.font-huge {
+    font-size: 2.7em;
+}
+
+svg text.icon {
+    display: inline-block;
+    opacity: 1;
+    margin: 0 .25rem 0 0;
+    width: 1.18em;
+    height: 1em;
+    font-family: Icons;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: inherit;
+    text-align: center;
+    speak: none;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-size: 1.5em;
+}
+
+.ui.dashboard-slider {
+    height: 650px;
+}
+
+.ui.dashboard-slider .swiper-slide > .segment {
+    height: 585px;
+}
+
+.aligned.center {
+    text-align: center !important;
+}
+
+.svg-d3-mindmap .node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 3px;
+}
+
+.svg-d3-mindmap .node text {
+    font-size: 11px;
+}
+
+.svg-d3-mindmap .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+
+.item-complex .item-content,
+.item-complex .item-content.activated {
+    background-color: transparent;
+}

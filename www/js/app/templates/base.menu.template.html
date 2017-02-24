@@ -1,0 +1,35 @@
+﻿<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="orange-gradiente font-branco">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon font-branco" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" class="orange-gradiente">
+        <ion-header-bar class="orange-gradiente aligned center">
+            <div class="padding-10-0" style="width: 100%;">
+                <img src="img/logo.png" height="30" />
+            </div>
+        </ion-header-bar>
+        <ion-content class="padding-10-0">
+            <ion-list>
+                <ion-item menu-close class="orange-gradiente font-branco" href="#/app/vendas">
+                    <i class="area chart icon"></i>
+                    Vendas
+                </ion-item>
+                <ion-item menu-close class="orange-gradiente font-branco" href="#/app/metas">
+                    <i class="trophy icon"></i>
+                    Metas
+                </ion-item>
+                <ion-item menu-close class="orange-gradiente font-branco" href="#/app/vendedores">
+                    <i class="user outline icon"></i>
+                    Vendedores
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

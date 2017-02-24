@@ -1,0 +1,73 @@
+﻿<ion-view view-title="Dashboard - Vendas">
+    <ion-content class="padding">
+        <div class="ui grid padding-30-0 dashboard-slider">
+
+            <ion-slides options="vendas.options" slider="data.slider">
+                <ion-slide-page>
+                    <div class="ui center aligned segment">
+                        <section>
+                            <div class="content">
+                                <h4 class="ui header">PRÓXIMA META</h4>
+                                <div class="description">
+                                    <div id="svg-d3-radial">
+                                        <div id="donut-diary-goal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section style="margin-top: 10px;">
+                            <div class="content">
+                                <h4 class="ui header">VENDAS POR ORIGEM</h4>
+                                <div class="description">
+                                    <div id="svg-d3-donut">
+                                        <div id="donut-sales-source"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra content sales-source-legend"></div>
+                        </section>
+                    </div>
+                </ion-slide-page>
+                <ion-slide-page>
+                    <div class="ui center aligned segment">
+                        <div class="content">
+                            <h4 class="ui header">TOTAL EM VENDAS</h4>
+                            <div class="description">
+                                <div class="ui segment">
+                                    <div class="ui bottom attached label">
+                                        <div class="ui teal image label">
+                                            R$
+                                            <div class="detail">
+                                                {{ vendas.TotalEmVendas.Data.Total | currency : "" : 2 }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h1 class="ui huge header"> {{ vendas.TotalEmVendas.Data.Total | byteNotation : 2 }} </h1>
+                                </div>
+
+                                <div class="ui segment">
+                                    <div class="ui bottom attached label">
+                                        <span class="ui mini empty circular label" ng-class="{ 'teal' : vendas.TotalEmVendas.Data.Ecommerce > vendas.TotalEmVendas.Data.Empresa, 'red' : vendas.TotalEmVendas.Data.Ecommerce < vendas.TotalEmVendas.Data.Empresa }"></span> Ecommerce
+                                    </div>
+                                    <h1 class="ui huge header"ng-class="{ 'font-turquesa' : vendas.TotalEmVendas.Data.Ecommerce > vendas.TotalEmVendas.Data.Empresa, 'font-vermelho' : vendas.TotalEmVendas.Data.Ecommerce < vendas.TotalEmVendas.Data.Empresa }">
+                                        {{ vendas.TotalEmVendas.Data.Ecommerce | byteNotation : 1 }}
+                                    </h1>
+                                </div>
+
+                                <div class="ui segment">
+                                    <div class="ui bottom attached label">
+                                        <span class="ui mini empty circular label" ng-class="{ 'teal' : vendas.TotalEmVendas.Data.Empresa > vendas.TotalEmVendas.Data.Ecommerce, 'red' : vendas.TotalEmVendas.Data.Empresa < vendas.TotalEmVendas.Data.Ecommerce }"></span> Empresa
+                                    </div>
+                                    <h1 class="ui huge header" ng-class="{ 'font-turquesa' : vendas.TotalEmVendas.Data.Empresa > vendas.TotalEmVendas.Data.Ecommerce, 'font-vermelho' : vendas.TotalEmVendas.Data.Empresa < vendas.TotalEmVendas.Data.Ecommerce }">
+                                        {{ vendas.TotalEmVendas.Data.Empresa | byteNotation : 1 }}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ion-slide-page>
+            </ion-slides>
+        </div>
+
+    </ion-content>
+</ion-view>
