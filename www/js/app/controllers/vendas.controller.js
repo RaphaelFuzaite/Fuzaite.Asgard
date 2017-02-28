@@ -223,17 +223,17 @@
 
         vm.TotalEmVendas = {
             Data: {
-                Total: 358669.55,
+                Total: 474448.77,
                 Ecommerce: 19902.02,
-                Empresa: 468767.53
+                Empresa: 454546.75
             }
         };
 
         vm.VendasPorOrigem = {
             Init: function () {
                 var data = [
-                    { Valor: "Empresa", Total: 468767.53, Percent: 95.92 },
-                    { Valor: "E-commerce", Total: 19902.02, Percent: 4.03 }
+                    { Valor: "Empresa", Total: 454546.75, Percent: (vm.TotalEmVendas.Data.Empresa / vm.TotalEmVendas.Data.Total * 100).toFixed(2) },
+                    { Valor: "E-commerce", Total: 19902.02, Percent: (vm.TotalEmVendas.Data.Ecommerce / vm.TotalEmVendas.Data.Total * 100).toFixed(2) }
                 ];
                 vm.Graficos.Donut.D3(data, '#donut-sales-source', 'second', '.sales-source-legend');
             }

@@ -309,3 +309,8 @@ svg text.icon {
 .item-complex .item-content.activated {
     background-color: transparent;
 }
+
+.content > .ui.card {
+    position: relative;
+    margin: 30px auto;
+}

@@ -1,0 +1,91 @@
+﻿<ion-view view-title="Dashboard - Campanhas">
+    <ion-content class="padding">
+        <div class="ui grid padding-30-0 dashboard-slider">
+
+            <ion-slides options="campanhas.options" slider="data.slider">
+                <ion-slide-page>
+                    <div class="ui center aligned segment">
+                        <section>
+                            <div class="content">
+                                <h4 class="ui header">LEADS POR ORIGEM</h4>
+                                <div class="description">
+                                    <div id="svg-d3-donut-campaign">
+                                        <div id="donut-campaign-leads"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra content campaign-leads-legend"></div>
+                        </section>
+                    </div>
+                </ion-slide-page>
+                <ion-slide-page>
+                    <div class="ui center aligned segment">
+                        <section>
+                            <div class="content">
+                                <h4 class="ui header">FEED DE NOTÍCIAS</h4>
+                                <div class="ui card">
+                                    <div class="content bg-laranja-claro">
+                                        <div class="header font-branco">Sandro</div>
+                                        <div class="meta">
+                                            <span class="date">COMERCIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="description">
+                                            <h4>Galera, acabou de subir a origem Dia da Mulher no CRMED! <strong>Primeira venda ganha diretinho.</strong></h4>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                        <a>15 minutos atrás</a>
+                                    </div>
+                                </div>
+                                <div class="ui card">
+                                    <div class="content bg-laranja-claro">
+                                        <div class="header font-branco">Julio</div>
+                                        <div class="meta">
+                                            <span class="date">CEO</span>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="description">
+                                            <h4>Primeiro a vender 30K antes das 12h00 ganha almoço com o DR!</h4>
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                        <a>30 minutos atrás</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </ion-slide-page>
+            </ion-slides>
+
+
+            <div class="ui center aligned segment">
+                <div class="content">
+                    <h4 class="ui header">HISTÓRICO DE CAMPANHAS</h4>
+                    <div class="description">
+                        <table class="ui very unstackable orange table font-medium">
+                            <thead>
+                                <tr>
+                                    <th>Campanha</th>
+                                    <th>Período</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in campanhas.Origens.Data">
+                                    <td>{{ item.Valor }}</td>
+                                    <td>{{ item.Periodo }}</td>
+                                    <td>{{ item.Descricao }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

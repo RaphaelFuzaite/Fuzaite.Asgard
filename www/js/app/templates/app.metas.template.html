@@ -14,12 +14,28 @@
 
         <div class="ui center aligned segment">
             <div class="content">
-                <div class="ui header">META DIÁRIA</div>
+                <div class="ui header">META POR HORA</div>
                 <div class="description">
+                    
                     <div class="ui progress" data-value="{{ metas.MetaDiaria.PercentualAtual }}" data-total="100">
                         <div class="bar bg-azul-escuro font-branco">{{ metas.MetaDiaria.PercentualAtual }}%</div>
                         <div class="label"></div>
+                        
                     </div>
+
+                    <div class="ui grid" style="margin-top: -55px;">
+                        <div class="five wide column">
+                            <h6 class="font-amarelo"><i class="long arrow left icon"></i> R$ 342K</h6>
+                        </div>
+                        <div class="six wide column">
+                            <h6 class="font-azul-claro">R$ {{ metas.TotalEmVendas.Data.Total | byteNotation: 2 }}</h6>
+                        </div>
+                        <div class="five wide column">
+                            <h6 class="font-amarelo">R$ 380K <i class="long arrow right icon"></i></h6>
+                        </div>
+                    </div>
+
+                    <div>&nbsp;</div>
 
                     <div class="ui grid">
                         <div class="eight wide column">

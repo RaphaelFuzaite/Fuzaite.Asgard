@@ -60,6 +60,15 @@ angular.module('starter', ['ionic'])
                     controllerAs: 'vendedores'
                 }
             }
+        }).state('app.campanhas', {
+            url: '/campanhas',
+            views: {
+                'menuContent': {
+                    templateUrl: 'js/app/templates/app.campanhas.template.html',
+                    controller: 'CampanhasController',
+                    controllerAs: 'campanhas'
+                }
+            }
         });
 
         $urlRouterProvider.otherwise('/app/vendas');
